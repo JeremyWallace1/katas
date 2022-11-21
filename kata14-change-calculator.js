@@ -24,7 +24,7 @@ const calculateChange = function(total, cash) {
     } else if (1 <= change) {
       changeReturned.penny = changeType(1);
     }
-  };
+  }
   return (changeReturned);
 };
 
@@ -33,9 +33,9 @@ const changeType = function(value) {
   for (let i = value; i <= change; i += value) {
     num++;
   }
-  change -= value*num;
+  change -= value * num;
   return (num);
-}
+};
 
 console.log(calculateChange(1787, 2000));
 console.log(calculateChange(2623, 4000));
