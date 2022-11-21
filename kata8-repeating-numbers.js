@@ -5,12 +5,12 @@ const repeatNumbers = function(data) {
   let innerArray = [];
   for (let i in data) { //outer loop to go through each array in "data"
     if (i > 0) {
-      innerArray += ", "
+      innerArray += ", ";
     }
-    for (j = 0; j < data[i][1]; j++) { //inner loop to go through each value in the inner array.
+    for (let j = 0; j < data[i][1]; j++) { //inner loop to go through each value in the inner array.
       innerArray += data[i][0];
     }
-}
+  }
   // If there is only one set of values then you should omit the comma.
   return (innerArray);
 };
