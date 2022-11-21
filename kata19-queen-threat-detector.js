@@ -14,9 +14,9 @@ let queenThreat = function() {
 let generateBoard = function(whiteQueen, blackQueen) {
 // return a nested array representing the board, containing the location of two queens.
   const gridSize = 8;
-  for (i = 0; i < gridSize; i++) {
+  for (let i = 0; i < gridSize; i++) {
     board.push([]);
-    for (j = 0; j < gridSize; j++) {
+    for (let j = 0; j < gridSize; j++) {
       if ((whiteQueen[0] === j && whiteQueen[1] === i) || (blackQueen[0] === j && blackQueen[1] === i)) {
         board[i].push(1);
       } else {
@@ -24,8 +24,8 @@ let generateBoard = function(whiteQueen, blackQueen) {
       }
     }
   }
-return board;
-}; 
+  return board;
+};
 
 let generatedBoard = generateBoard(whiteQueen, blackQueen);
 
