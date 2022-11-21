@@ -4,14 +4,14 @@ const instructorWithLongestName = function(instructors) {
   // if more than one with longest name, return the first one
   // loop over array to investigate each object
   let longestName = { //set empty array & objects within
-      name: "",
-      course: ""
+    name: "",
+    course: ""
   };
   for (let i = 0; i < instructors.length; i++) {
     if (instructors[i].name.length > longestName.name.length) { //greater than, so if they are equal it doesn't perform an action and leaves the first one of that length as the result
       longestName = instructors[i];
-    };
-  };
+    }
+  }
   return longestName;
 };
 

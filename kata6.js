@@ -1,7 +1,7 @@
-const whereCanIPark = function (spots, vehicle) {
+const whereCanIPark = function(spots, vehicle) {
   // Code here!
-  for (let y = 0; y < spots.length; y++) {  //outer loop (rows)
-    for (let x = 0; x < spots[y].length; x++) { //inner loop (columns)
+  for (let y in spots) {  //outer loop (rows)
+    for (let x in spots[y]) { //inner loop (columns)
       const spot = spots[y][x]; //spot is row, column
       if (vehicle === 'regular') { //regular car can fit only in regular spot
         if (spot === 'R') {
@@ -15,7 +15,7 @@ const whereCanIPark = function (spots, vehicle) {
         if (spot === 'R' || spot === 'S' || spot === 'M') {
           return [x, y];
         }
-      } 
+      }
     }
   }
   return (false);
