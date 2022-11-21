@@ -3,7 +3,7 @@ const talkingCalendar = function(date) {
   // split into year / month / day
   let year = date.slice(0, 4);
   // add to friendlyDate month
-  function getMonth (dateMonth) {
+  const getMonth = function(dateMonth) {
     //console.log(dateMonth);
     let month = {
       '01': 'January',
@@ -20,7 +20,8 @@ const talkingCalendar = function(date) {
       '12': 'December'
     };
     return month[dateMonth];
-  }
+  };
+
   let friendlyMonth = getMonth(date.slice(5, 7));
 
   // add to friendlyDate day (make sure st, nd, rd, th used)
@@ -29,7 +30,8 @@ const talkingCalendar = function(date) {
     day = day.slice(1,2);
   }
   //console.log(typeof day)
-  function getOrdinal (day) {
+  const getOrdinal = function(day) {
+    let ordinal = "";
     if (day === '1' || day === '21' || day === '31') {
       ordinal = 'st';
     } else if (day === '2' || day === '22') {
@@ -40,7 +42,8 @@ const talkingCalendar = function(date) {
       ordinal = 'th';
     }
     return ordinal;
-  }
+  };
+
   let ord = getOrdinal(day);
   let friendlyDate = friendlyMonth + " " + day + ord + ", " + year;
   // add comma and space ", "
