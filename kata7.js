@@ -1,9 +1,9 @@
-const checkAir = function (samples, threshold) {
+const checkAir = function(samples, threshold) {
   // Code here!
   // count cleans
   let dirty = 0;
   let total = 0;
-  for (let i = 0; i < samples.length; i++) {
+  for (let i in samples) {
     if (samples[i] === "dirty") {
       dirty++; // count dirties
     }
