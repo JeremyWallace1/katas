@@ -2,7 +2,7 @@ const conditionalSum = function(values, condition) {
   // loop through numbers testing condition
   // if match condition add to new variable (sum of all those that match the condition)
   let sumNumbers = 0;
-  for (let i in values) {  // loop through numbers 
+  for (let i in values) {  // loop through numbers
     if ((condition === "even") && (values[i] % 2 === 0) || (condition === "odd" && (values[i] % 2 !== 0))) { // testing even condition
       sumNumbers += values[i];
     // } else if ((condition === "odd") && (values[i] % 2 !== 0)) { // testing odd condition
