@@ -17,22 +17,22 @@ const numberGuesser = function() {
       attempts.push(Number(answer));
       return console.log("You got it! You took " + (attempts.length) + " attempts!");
     } else if (Number(answer) < randomNumber) {
-        if (attempts.includes(Number(answer))) { // not counted as an attempt if it was already attempted
-          console.log("Already Guessed!");
-        } else {
-          attempts.push(Number(answer));
-          console.log("Too Low!");
-        }
+      if (attempts.includes(Number(answer))) { // not counted as an attempt if it was already attempted
+        console.log("Already Guessed!");
+      } else {
+        attempts.push(Number(answer));
+        console.log("Too Low!");
+      }
     } else if (Number(answer) > randomNumber) {
-        if (attempts.includes(Number(answer))) { // not counted as an attempt if it was already attempted
-          console.log("Already Guessed!");
-        } else {
-          attempts.push(Number(answer));
-          console.log("Too High!");
-        }
+      if (attempts.includes(Number(answer))) { // not counted as an attempt if it was already attempted
+        console.log("Already Guessed!");
+      } else {
+        attempts.push(Number(answer));
+        console.log("Too High!");
+      }
     } else if ((typeof answer) !== "number") { // not counted as an attempt as it is not a number
-        console.log("Not a number! Try again!");
-    }        
+      console.log("Not a number! Try again!");
+    }
   } while (answer !== randomNumber); // keeps running until the number inputted by user matches the randomly generated number
 };
 
