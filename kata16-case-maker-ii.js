@@ -17,7 +17,7 @@ const makeCase = function(input, tocase) {
         multiCase = whichCase(multiCase, k);
       }
     }
-  return multiCase;
+    return multiCase;
   } else {
     return whichCase(input, tocase);
   }
@@ -44,15 +44,15 @@ const whichCase = function(input, caseType) {
   } else if (caseType === "lower") {
     newCase = lowerCase(input);
   }
-  return(newCase);
-}
+  return newCase;
+};
 
 const camelCase = function(input) {
   // Your code here
   let newInput = "";
   for (let i = 0; i < input.length; i++) {
     if (input[i] === " ") { //find and ignore the space
-      newInput += input[i+1].toUpperCase(); //capitalize the letter after the space
+      newInput += input[i + 1].toUpperCase(); //capitalize the letter after the space
       i++; //increment so that it skips the space
     } else {
       newInput += input[i]; //transfers the letter from the old input to newInput (as long as it isn't a space)
@@ -67,7 +67,7 @@ const pascalCase = function(input) {
   newInput += input[0].toUpperCase();
   for (let i = 1; i < input.length; i++) {
     if (input[i] === " ") { //find and ignore the space
-      newInput += input[i+1].toUpperCase(); //capitalize the letter after the space
+      newInput += input[i + 1].toUpperCase(); //capitalize the letter after the space
       i++; //increment so that it skips the space
     } else {
       newInput += input[i]; //transfers the letter from the old input to newInput (as long as it isn't a space)
@@ -109,7 +109,7 @@ const titleCase = function(input) {
   for (let i = 1; i < input.length; i++) {
     if (input[i] === " ") { //find and ignore the space
       newInput += input[i];
-      newInput += input[i+1].toUpperCase(); //capitalize the letter after the space
+      newInput += input[i + 1].toUpperCase(); //capitalize the letter after the space
       i++;
     } else {
       newInput += input[i]; //transfers the letter from the old input to newInput (as long as it isn't a space)
@@ -149,7 +149,7 @@ const upperCase = function(input) {
   let newInput = "";
   for (let i = 0; i < input.length; i++) {
     newInput += input[i].toUpperCase();
-      //transfers the letter from the old input to newInput and capitalizes it
+    //transfers the letter from the old input to newInput and capitalizes it
   }
   return newInput;
 };
@@ -159,7 +159,7 @@ const lowerCase = function(input) {
   let newInput = "";
   for (let i = 0; i < input.length; i++) {
     newInput += input[i].toLowerCase();
-      //transfers the letter from the old input to newInput and capitalizes it
+    //transfers the letter from the old input to newInput and capitalizes it
   }
   return newInput;
 };
