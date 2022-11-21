@@ -31,8 +31,8 @@ const squareCode = function(message) {
         tempStr += tempArray[l][k];
       }
     }
-  finalArray.push(tempStr); //push the completed jumble into the new array
-  }  
+    finalArray.push(tempStr); //push the completed jumble into the new array
+  }
 
   const finalString = function(finalArray) {
     tempStr = "";
@@ -41,10 +41,10 @@ const squareCode = function(message) {
         tempStr += finalArray[m] + " ";
       } else {
         tempStr += finalArray[m];
-      }  
+      }
     }
     return tempStr;
-  }
+  };
 
   return finalString(finalArray);
 };
