@@ -2,10 +2,8 @@ const repeatNumbers = function(data) {
   // Put your solution here
   // return a string with each of the given values repeated the appropriate number of times
   // multiple sets of values each set should be separated by a comma
-  let i = 0;
-  let j = 0;
   let innerArray = [];
-  for (i = 0; i < data.length; i++) { //outer loop to go through each array in "data"
+  for (let i in data) { //outer loop to go through each array in "data"
     if (i > 0) {
       innerArray += ", "
     }
