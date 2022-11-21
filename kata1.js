@@ -2,7 +2,7 @@ const sumLargestNumbers = function(data) {
   let numSecondLargest = 0;
   let numLargest = 0;
   let sumNumbers = 0;
-  for (let i = 0; i < data.length; i++) {
+  for (let i in data) {
     if (data[i] >= numLargest) {
       numSecondLargest = numLargest;
       numLargest = data[i];
